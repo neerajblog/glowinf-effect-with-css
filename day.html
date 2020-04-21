@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body
+        {
+            background-color:rgb(35, 2, 36);
+            display: flex;
+            justify-content: center;
+           align-items: center;
+           height: 100vh;
+        }
+        .loader
+        {
+           position: relative;
+            width: 200px;
+            height: 200px;
+            background: rgb(35, 2, 36);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            border-radius: 50%;
+            box-shadow: -5px -5px 5px rgba(255,255,255,0.1),
+                        10px 10px 10px rgba(0,0,0,0.4),
+                        inset -5px -5px 5px rgba(255,255,255,0.1),
+                        inset 10px 10px 10px rgba(0,0,0,0.4);
+        }
+        .loader:before
+        {
+            content: '2020 ';
+            position: absolute;
+          text-align: center;
+          line-height: 5;
+          font-size: 30px;
+          color:#14ffe9;
+          
+            top:25px;
+            left: 25px;
+            right: 25px;
+            z-index: 10;
+            bottom: 25px;
+            border-radius: 50%;
+            background: rgb(35, 2, 36);
+            box-shadow:
+                        inset -10px -10px 5px rgba(255,255,255,0.1),
+                        inset 15px 15px 15px rgba(0,0,0,0.4);     
+
+        }
+                        .loader span
+                        {
+                            position: absolute;
+                            width: 110%;
+                            height: 110%;
+                           border-radius: 50%;
+                         transition: .2s;
+                          
+                       
+                            background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+                           
+                            animation: animate 2s linear infinite;
+                        }
+                        @keyframes animate{
+                            0%{
+                                transform: rotate(0deg);
+                                opacity: .2;
+                               
+                            }
+                            50%
+                            {
+                                transform: rotate(360deg);
+                             
+                                opacity: .5;
+                            }
+                            100%{
+                                transform: rotate(360deg);
+                                opacity: 1;filter: blur(10px);
+                            }
+                        }
+                        
+    </style>
+</head>
+<body>
+    <div class="loader">
+       
+        <span></span>
+        
+    </div>
+</body>
+</html>
